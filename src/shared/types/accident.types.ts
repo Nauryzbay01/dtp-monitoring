@@ -1,0 +1,64 @@
+export type AccidentProperties = {
+  OBJECTID?: number;
+  area_code?: string;
+  date?: string;
+  time?: string;
+  address?: string;
+  description?: string;
+  severity?: string;
+  fdlid?: string;
+  fd1r01p1?: number;
+  fd1r05p1?: string;
+  fd1r06p1?: string;
+  fd1r06p2?: string;
+  fd1r06p3?: string | null;
+  fd1r07p1?: string | null;
+  fd1r07p2?: string;
+  fd1r07p3?: string;
+  fd1r07p4?: string | null;
+  fd1r08p1?: string;
+  fd1r09p1?: string;
+  fd1r10p1?: number;
+  fd1r13p1?: number;
+  fd1r13p2?: string | null;
+  fd1r14p1?: string;
+  fd1r17?: string | null;
+  fd1r17_descrip?: string | null;
+  fd1r041p1?: string | null;
+  fd1r061p0?: string | null;
+  fd1r061p1?: string | null;
+  fd1r061p2?: string | null;
+  fd1r071p1?: string;
+  fd1r071p1_id?: string;
+  fd1r072p1?: string | null;
+  fd1r073p1?: number | null;
+  fd1r074p1?: number | null;
+  fd1r73p1?: number;
+  fd1r74p1?: number;
+  fd1r141p1?: string;
+  fd1r141p1_id?: string;
+  fd1r142p6?: number | null;
+  globalid?: string;
+  is_public_transport?: number;
+  load_date?: number;
+  objectid?: number;
+  period?: number;
+  rta_date?: number;
+  type_dtp?: number | null;
+  vehicle_category?: string | null;
+  yr?: number;
+  [key: string]: unknown;
+};
+
+export type AccidentPoint = {
+  id: string | number;
+  coordinates: [number, number];
+  properties: AccidentProperties;
+};
+
+export type ClusterPoint = {
+  id: string | number;
+  coordinates: [number, number];
+  pointCount: number;
+  points: AccidentPoint[];
+};
